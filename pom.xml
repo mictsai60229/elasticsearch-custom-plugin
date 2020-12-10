@@ -96,7 +96,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <outputDirectory>target</outputDirectory>
                     <descriptors>
-                        <descriptor>src/main/assembly/plugin.xml</descriptor>
+                        <descriptor>src/main/assemblies/plugin.xml</descriptor>
                     </descriptors>
                 </configuration>
                 <executions>

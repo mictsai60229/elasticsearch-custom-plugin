@@ -21,11 +21,6 @@ public class TestAnalyzer extends Analyzer{
     }
 
     @Override
-    protected Reader initReader(String fieldName, Reader reader){
-        return new TestCharFilter(reader, startString, endString, nth);
-    }
-
-    @Override
     protected TokenStreamComponents createComponents(String fieldName) { 
         
         final Tokenizer source = new TestTokenizer(seperators);
@@ -35,5 +30,10 @@ public class TestAnalyzer extends Analyzer{
     @Override
     protected TokenStream normalize(String filedName, TokenStream input){
         return new TestTokenFilter(input);
+    }
+
+    @Override
+    protected Reader initReader(String fieldName, Reader reader){
+        return new TestCharFilter(reader, this.startString, this.endString, this.nth);
     }
 }

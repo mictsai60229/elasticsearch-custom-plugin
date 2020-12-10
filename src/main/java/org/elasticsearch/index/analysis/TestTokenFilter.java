@@ -28,8 +28,6 @@ public class TestTokenFilter extends TokenFilter {
         for(int i=0;i<length;i++){
             buffer[i] = Character.toLowerCase(buffer[i]);
         }
-        termAtt.setEmpty();
-        termAtt.copyBuffer(buffer, 0, length);
 
         return true;
     }

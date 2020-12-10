@@ -27,8 +27,8 @@ public class AnalysisTestPlugin extends Plugin implements AnalysisPlugin{
     }
 
     @Override
-    public Map<String, AnalysisModule.AnalysisProvider<org.elasticsearch.index.analysis.TokenFilterFactory>> getTokenFilters() {
-        Map<String, AnalysisModule.AnalysisProvider<org.elasticsearch.index.analysis.TokenFilterFactory>> extra = new HashMap<>();
+    public Map<String, AnalysisModule.AnalysisProvider<TokenFilterFactory>> getTokenFilters() {
+        Map<String, AnalysisModule.AnalysisProvider<TokenFilterFactory>> extra = new HashMap<>();
         extra.put("test", TestTokenFilterFactory::new);
         return extra;
     }
